@@ -19,7 +19,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private TextView lblGotoRegister;
     private Button btnLogin;
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         loginErrorMsg = (TextView) findViewById(R.id.login_error);
         Helper bdH = new Helper(this);
         final SQLiteDatabase db = bdH.getReadableDatabase();
+
 
 
         btnLogin.setOnClickListener(
