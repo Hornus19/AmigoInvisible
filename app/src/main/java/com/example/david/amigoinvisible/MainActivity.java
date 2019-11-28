@@ -38,8 +38,6 @@ public class MainActivity extends AppCompatActivity{
         inputPassword = (EditText) findViewById(R.id.txtPass);
         btnLogin = (Button) findViewById(R.id.btnLogin);
         loginErrorMsg = (TextView) findViewById(R.id.login_error);
-        Helper bdH = new Helper(this);
-        final SQLiteDatabase db = bdH.getReadableDatabase();
 
 
 
@@ -52,16 +50,19 @@ public class MainActivity extends AppCompatActivity{
 
                         if (!user.equalsIgnoreCase("")) {
                             if (!password.equalsIgnoreCase("")) {
+                                Acceso acceso= Acceso.getInstance(getApplicationContext());
+                                acceso.open();
 
-
-                                Cursor cursor = db.rawQuery("select pass,group,amigo where user from user='" + user + "'", null);
+                                Cursor cursor =acceso.getAddress(user);
                                 if (cursor != null) {
                                     cursor.isFirst();
                                     if (cursor.getString(cursor.getColumnIndex("pass")).equals(password)) {
-                                        Cursor g = db.rawQuery("select diner, fecha from group where id='" + cursor.getString(cursor.getColumnIndex("group")) + "'", null);
+                                        Cursor g = acceso.friend(cursor);
                                         String diner = g.getString(cursor.getColumnIndex("diner"));
                                         String amigo = g.getString(cursor.getColumnIndex("amigo"));
                                         String fecha = g.getString(cursor.getColumnIndex("fecha"));
+                                        Toast.makeText(MainActivity.this, "Fue bien", Toast.LENGTH_LONG)
+                                                .show();
                                         Intent i = new Intent(MainActivity.this, Second_activity.class);
                                         i.putExtra("friend", amigo);
                                         i.putExtra("diner", diner);

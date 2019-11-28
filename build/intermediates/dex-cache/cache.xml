@@ -2,22 +2,13 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="C:\Users\davgra3049\Downloads\AmigoInvisible\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\davgra3049\.gradle\caches\modules-2\files-2.1\com.readystatesoftware.sqliteasset\sqliteassethelper\2.0.1\d5f02e4a4d65ec0fbb339f2e4228723d1540bb9f\sqliteassethelper-2.0.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="29.0.2"
-        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
-        <dex dex="C:\Users\davgra3049\Downloads\AmigoInvisible\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_097579c8336ee193a10850f9ce443672b5548c13\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\davgra3049\Downloads\AmigoInvisible\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="29.0.2"
-        sha1="5f83d09ffc5aa1360dc670f4a8f3daaaf4d04275">
-        <dex dex="C:\Users\davgra3049\Downloads\AmigoInvisible\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_1c4c75a4ca2ad493dbbf522c691bddd90bec2be2\classes.dex" />
+        sha1="d5f02e4a4d65ec0fbb339f2e4228723d1540bb9f">
+        <dex dex="C:\Users\davgra3049\Downloads\AmigoInvisible\app\build\intermediates\pre-dexed\debug\sqliteassethelper-2.0.1_d4e5d3be0cc76f5c330bb4f8957b17b0a9f7065e.jar" />
     </item>
 
 </items>
